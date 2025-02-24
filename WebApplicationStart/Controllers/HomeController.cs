@@ -36,9 +36,21 @@ namespace WebApplicationStart.Controllers
             return "Добрый вечер";
         }
 
-        public double Task2(double a = 0, double b = 0)
+        public double Task2(double a, double b)
         {
             return a + b;
+        }
+
+        public string Task3(double a, double b, char op = '+')
+        {
+            switch (op)
+            {
+                case '+': return (a + b).ToString();
+                case '-': return (a - b).ToString();
+                case '*': return (a * b).ToString();
+                default:
+                    return "Данная операция недоступна.\nСущетсвует возможность только ввода '+', '-' и '*'";
+            }
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
