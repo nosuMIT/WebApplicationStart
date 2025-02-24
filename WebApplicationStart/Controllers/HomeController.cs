@@ -29,12 +29,17 @@ namespace WebApplicationStart.Controllers
             var timeInHour = DateTime.Now.Hour;
             if (timeInHour >= 0 && timeInHour < 6)
                 return "Доброй ночи";
-			if (timeInHour >= 6 && timeInHour < 12)
-				return "Доброе утро";
-			if (timeInHour >= 12 && timeInHour < 18)
-				return "Добрый день";
-			return "Добрый вечер";
-		}
+            if (timeInHour >= 6 && timeInHour < 12)
+                return "Доброе утро";
+            if (timeInHour >= 12 && timeInHour < 18)
+                return "Добрый день";
+            return "Добрый вечер";
+        }
+
+        public double Task2(double a = 0, double b = 0)
+        {
+            return a + b;
+        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
